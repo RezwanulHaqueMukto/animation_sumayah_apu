@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 2px dotted red;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: crimson;
+      color: white;
+      text-align: center;
+      padding: 5px;
+      position: absolute;
+      z-index: 2;
+      bottom: -5px; 
+      left: 50%;
+      margin-left: -100px; 
+      transition: transform 0.8s ease-in-out, opacity 0.3s ease-in-out; /* Added transform property */
+      opacity: 0;
+      transform: translateY(0px); 
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(-35px); /* Slide up on hover */
+    }
+  </style>
+</head>
+
+<body style="text-align:center;">
+  <p>Hover the mouse over the below text.</p>
+  <div class="tooltip">Message for you!!
+    <span class="tooltiptext">Hello!!</span>
+  </div>
+</body>
+
+</html>
+
+</html>
